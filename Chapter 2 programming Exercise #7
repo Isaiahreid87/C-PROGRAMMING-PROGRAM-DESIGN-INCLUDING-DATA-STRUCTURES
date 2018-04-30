@@ -1,0 +1,24 @@
+/*C++ PROGRAMMING: PROGRAM DESIGN INCLUDING DATA STRUCTURES 5th edition 
+By: Isaiah Reid
+Date: 4/30/2018 Chapter 2 Programming exercise 7 */
+
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float n;
+    int roundNumber;
+    
+    cout <<" What number do you you want rounded? ";
+    cin >> n;
+    
+    roundNumber = n + .5;
+    
+    cout <<"This is your rounded number: " << roundNumber;
+    
+    return 0;
+}
