@@ -1,0 +1,51 @@
+/* This is Programming exercise #8
+
+
+
+
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+const int SECRET = 11;
+const double RATE = 17.51;
+
+int main()
+{
+    int num1;
+    int num2;
+    int newNum;
+    string name;
+    double wages;
+    double hoursWorked;
+    
+    cout <<"Input two intergers:";
+    cin >> num1;
+    cin >> num2;
+    
+    cout <<"The value of num1 = " << num1 <<" and the value of num2 = " << num2 << endl;
+    
+    newNum = (num1 * 2) + num2;
+    
+    cout <<"Your new number is: " << newNum << endl;
+    
+    newNum = newNum + SECRET;
+    
+    cout <<"Now after adding SECRET your new number is: " << newNum << endl;
+    
+    cout <<"Please enter your last name: ";
+    cin >> name;
+    
+    cout <<"Please enter how many hours you worked between 0 and 70: ";
+    cin >> hoursWorked;
+    
+    wages = hoursWorked * RATE;
+    
+    cout << "Name: " << name << endl;
+    cout << "Payrate: " << RATE << endl;
+    cout << "Hours Worked: " << hoursWorked << endl;
+    cout << "Salary: " << wages << endl;
+    
+    return 0;
+}
