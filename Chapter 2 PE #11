@@ -1,0 +1,44 @@
+/* Programming exercise #11 chapter2 */
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   
+   double num1, num2, num3, num4, num5;
+   int total;
+   double average;
+   
+   cout <<"Input five numbers: ";
+   cin >> num1;
+   cin >> num2;
+   cin >> num3;
+   cin >> num4;
+   cin >> num5;
+   
+   
+   cout <<"Your numbers are: ";
+   cout << num1 <<endl;
+   cout << num2 <<endl;
+   cout << num3 <<endl;
+   cout << num4 <<endl;
+   cout << num5 <<endl;
+   
+   
+   num1 = num1 + .5;
+   num2 = num2 + .5;
+   num3 = num3 + .5;
+   num4 = num4 + .5;
+   num5 = num5 + .5;
+   
+   total = (static_cast<int>(num1) + static_cast<int>(num2) + static_cast<int>(num3) + static_cast<int>(num4) + static_cast<int>(num5));
+   average = (static_cast<int>(num1) + static_cast<int>(num2) + static_cast<int>(num3) + static_cast<int>(num4) + static_cast<int>(num5)) / 5;
+   
+   cout <<"Your total is: " << total <<endl;
+   cout <<"Your average is: " << average <<endl;
+   
+   
+    return 0;
+}
