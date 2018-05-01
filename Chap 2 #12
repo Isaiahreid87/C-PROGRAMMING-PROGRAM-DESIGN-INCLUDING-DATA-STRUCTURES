@@ -1,0 +1,27 @@
+/* Write a program that prompts the capacity, in gallons, of an automobile fuel
+tank and the miles per gallons the automobile can be driven. The program
+outputs the number of miles the automobile can be driven without refueling. */
+
+
+
+// Isaiah Reid chap 2 PE # 12
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int fuelCapacity;
+    int mpg;
+    
+    cout <<" How many gallons can your car hold: ";
+    cin >> fuelCapacity;
+    
+    cout << " How many miles per gallon your car gets: ";
+    cin >> mpg;
+    
+    cout <<" You can drive: " << mpg * fuelCapacity << " miles without stoping. ";
+    
+    return 0;
+}
