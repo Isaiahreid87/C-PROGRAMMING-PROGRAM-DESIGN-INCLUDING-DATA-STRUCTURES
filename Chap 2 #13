@@ -1,0 +1,35 @@
+/* Write a C++ program that prompts the user to input the elapsed time for
+an event in seconds. The program then outputs the elapsed time in hours,
+minutes, and seconds. (For example, if the elapsed time is 9630 seconds,
+then the output is 2:40:30.) */
+
+//Isaiah Reid chap 2 #13 //
+
+#include <iostream>
+
+using namespace std;
+
+const int HOUR = 3600;
+const int MIN = 60;
+const int SECOND = 1;
+
+int main()
+{
+   int hour;
+   int min ;
+   int inputSecond;
+   int second;
+   
+   cout << "Input your seconds: ";
+   cin >> inputSecond;
+
+   hour = inputSecond / HOUR;
+   inputSecond = inputSecond % HOUR;
+   min = inputSecond / MIN;
+   inputSecond = inputSecond % MIN;
+   second = inputSecond / SECOND;
+   
+   cout <<"Your time is: " << hour << ":" << min << ":" << second;
+   
+   return 0;
+}
