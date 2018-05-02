@@ -1,0 +1,31 @@
+/* Isaiah reid chap 2 PE #14 
+
+Write a C++ program that prompts the user to input the elapsed time for
+an event in hours, minutes, and seconds. The program then outputs the
+elapsed time in seconds.
+
+*/
+
+
+#include <iostream>
+
+using namespace std;
+
+const int SECSPERMIN = 60;
+const int SECSPERHOUR = 60 * SECSPERMIN;
+
+int main ()
+{
+    int totalSeconds, mins, hours, seconds;
+    
+    cout <<"How much time elasped in hours, min, and seconds: ";
+    cin >> hours >> mins >> seconds;
+    
+    totalSeconds = seconds + ( hours * SECSPERHOUR) + ( mins * SECSPERMIN);
+    
+    cout <<"This is your time in seconds: " << totalSeconds;
+    
+    return 0;
+}
+
+
