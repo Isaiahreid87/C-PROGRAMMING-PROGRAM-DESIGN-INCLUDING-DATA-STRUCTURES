@@ -1,0 +1,34 @@
+/* To make a profit, a local store marks up the prices of its items by a certain
+percentage. Write a C++ program that reads the original price of the item sold,
+the percentage of the marked-up price, and the sales tax rate. The program then
+outputs the original price of the item, the percentage of the mark-up, the store’s
+selling price of the item, the sales tax rate, the sales tax, and the final price of the
+item. (The final price of the item is the selling price plus the sales tax.) */
+
+//Isaiah Reid chap 2 PE# 15
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    double originalPrice, markUpPrice, salesPrice, price;
+    const double markUp = .03;
+    const double salesTax = .07;
+    
+    cout <<"Whats is your original price: ";
+    cin >> originalPrice;
+    
+    markUpPrice = markUp * originalPrice + originalPrice;
+    salesPrice = salesTax * originalPrice + originalPrice;
+    
+    price = (( markUp + salesTax) * originalPrice) + originalPrice;
+    
+    cout <<"Your original price is: "<< originalPrice <<endl;
+    cout <<"Your markup price is: " << markUpPrice <<endl;
+    cout <<"Your sales price is: " << salesPrice <<endl;
+    cout <<"Your overall price is: "<< price <<endl;
+    
+    return 0;
+}
