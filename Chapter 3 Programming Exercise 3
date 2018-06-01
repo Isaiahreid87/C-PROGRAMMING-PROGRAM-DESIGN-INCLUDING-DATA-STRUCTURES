@@ -1,0 +1,31 @@
+/* Write a program that prompts the user to enter the weight of a person in
+kilograms and outputs the equivalent weight in pounds. Output both the
+weights rounded to two decimal places. (Note that 1 kilogram ¼ 2.2
+pounds.) Format your output with two decimal places.*/
+
+// By: Isaiah Reid 
+
+#include <iostream>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+
+    double  kiloGram, pound;
+
+    cout << fixed << showpoint << setprecision(2);
+
+    cout <<"How many pounds do you weight? ";
+    cin >> pound;
+    cout <<"You weigh " << pound <<" pounds.";
+    cout <<endl;
+
+    kiloGram = pound / 2.2046;
+
+    cout <<"You weigh " << kiloGram <<" Kilograms." <<endl;
+
+    return 0;
+}
