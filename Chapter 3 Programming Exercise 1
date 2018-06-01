@@ -1,0 +1,52 @@
+/* Programming Problem 1 Chapter 3 
+By: Isaiah Reid */
+
+
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+
+{
+    ifstream inFile;
+    ofstream outFile;
+
+    const double PI = 3.1416;
+    double length, width, radius, balance, interestRate, parameter, circumference;
+    int age;
+    string firstName, lastName;
+    char ch;
+
+    inFile.open("inData.txt");
+    outFile.open("outData.txt");
+
+    inFile >> length >> width >> radius >> firstName >>
+           lastName >> age >> balance >> interestRate >> ch;
+
+
+    cout << fixed << showpoint << setprecision(2);
+
+    cout << "Rectangle: " << endl;
+    cout << "Length: " << length << " , Width: " << width << " , area; " << length * width << " , Parameter: " << (length + width) * 2 <<endl;
+    cout <<endl;
+
+    cout << "Circle: " << endl;
+    cout << "Radius: " << radius << " , area: " << (radius * radius) * PI << " , circumference: " << 2 * PI * radius <<endl;
+    cout <<endl;
+
+    cout << "Name: " << firstName << " " << lastName << "," << " age: " << age <<endl;
+    cout << "Beginning Balance = $" << balance << " Interest rate = " << interestRate <<endl;
+    cout << "Balance at the end of the month: $" <<  balance * (interestRate / 100 / 12) + balance <<endl;
+    cout <<endl;
+
+    cout << "The character that comes after " << ch << " is: B"<<endl;
+
+
+    return 0;
+}
+
+
