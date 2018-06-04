@@ -1,0 +1,63 @@
+/* Dont forget to save your sample data as a text file so your program can read from it. In this program I named mine tickets. */
+
+
+/*The manager of a football stadium wants you to write a program that
+calculates the total ticket sales after each game. There are four types of
+tickets—box, sideline, premium, and general admission. After each game,
+data is stored in a file in the following form: */
+
+
+
+
+// By: Isaiah Reid  6/4/2018
+
+
+
+
+
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <fstream>
+
+using namespace std;
+
+int main()
+{
+
+    int boxPrice, boxSales, sidelinePrice, sidelineSales, premiumPrice, premiumSales, generalPrice, generalSales;
+    ifstream inFile;
+
+
+
+    inFile.open("tickets.txt");
+
+    cout << fixed << setprecision(2) << showpoint;
+
+    inFile >> boxPrice >> boxSales >> sidelinePrice >> sidelineSales >> premiumPrice >> premiumSales >> generalPrice >> generalSales;
+
+
+    cout << "The price of box tickets are: " << boxPrice  <<endl;
+    cout << "The total amount of box tickets sold is: " << boxSales << endl;
+    cout << "The amount we made off box tickets are: " << boxPrice * boxSales <<endl;
+    cout <<endl;
+
+    cout << "The price of sideline tickets are: " << sidelinePrice  <<endl;
+    cout << "The total amount of sideline tickets sold is: " << sidelineSales << endl;
+    cout << "The amount we made off sideline tickets are: " << sidelinePrice * sidelineSales <<endl;
+    cout <<endl;
+
+    cout << "The price of premium tickets are: " << premiumPrice  <<endl;
+    cout << "The total amount of premium tickets sold is: " << premiumSales << endl;
+    cout << "The amount we made off premium tickets are: " << premiumPrice * premiumSales <<endl;
+    cout <<endl;
+
+    cout << "The price of general admission tickets are: " << generalPrice  <<endl;
+    cout << "The total amount of general admission tickets sold is: " << generalSales << endl;
+    cout << "The amount we made off general admission tickets are: " << generalPrice * generalSales <<endl;
+    cout <<endl;
+
+    inFile.close();
+
+return 0;
+}
