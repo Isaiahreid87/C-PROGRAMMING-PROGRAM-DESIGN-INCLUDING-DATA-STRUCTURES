@@ -1,4 +1,4 @@
-# C-PROGRAMMING-PROGRAM-DESIGN-INCLUDING-DATA-STRUCTURES
+# C PROGRAMMING PROGRAM DESIGN INCLUDING DATA STRUCTURES
 
 
 This is my portfolio to show some of my coding skills hopefully these can help you as someone have helped me.
