@@ -1,0 +1,48 @@
+/* Three employees in a company are up for a special pay increase. You are given a file, say Ch3_Ex8Data.txt, with the following data:
+Miller Andrew 65789.87 5 Green Sheila 75892.56 6 Sethi Amit 74900.50 6.1
+Each input line consists of an employee’s last name, first name, current salary, and percent pay increase. 
+For example, in the first input line, the last name of the employee is Miller, the first name isAndrew, the current salary is 65789.87, 
+and pay increase is 5%. Write a program that reads data from the specified file and stores the output in the file Ch3_Ex8Output.dat. 
+For each employee, the data must be output in the following form: firstName lastName updatedSalary. 
+Format the output of decimal numbers to two decimal places. */
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+#include <fstream>
+#include <string>
+#include <iomanip>
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    string lastName, firstName, last2Name, first2Name, last3Name, first3Name;
+    double pay1, pay2, pay3, percent1, percent2, percent3 , newSalary1, newSalary2, newSalary3;
+
+    ifstream inFile;
+    ofstream outFile;
+
+    inFile.open("inData.txt");
+    outFile.open("outData.txt");
+
+    outFile << fixed << showpoint << setprecision(2) <<endl;
+
+    inFile >> lastName >> firstName >> pay1 >> percent1 >> last2Name >> first2Name >> pay2 >> percent2 >> last3Name >> first3Name >> pay3 >> percent3;
+
+    newSalary1 = ((pay1 * percent1) / 100) + pay1;
+    newSalary2 = ((pay2 * percent2) / 100) + pay2;
+    newSalary3 = ((pay3 * percent3) / 100) + pay3;
+
+
+
+    outFile << lastName << " " <<firstName << " " << newSalary1 <<endl;
+    outFile << last2Name << " " <<first2Name << " " << newSalary2 <<endl;
+    outFile << last3Name << " " <<first3Name <<" "<< newSalary3 <<endl;
+
+
+    inFile.close();
+    outFile.close();
+
+    return 0;
+}
