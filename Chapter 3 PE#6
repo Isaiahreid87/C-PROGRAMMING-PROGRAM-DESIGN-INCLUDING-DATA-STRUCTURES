@@ -1,0 +1,72 @@
+/*  Write a program that calculates and prints the monthly paycheck for an employee. 
+The net pay is calculated after taking the following deductions:
+
+Federal Income Tax: 15% 
+State Tax: 3.5% 
+Social Security Tax: 5.75% 
+Medicare/Medicaid Tax: 2.75% 
+Pension Plan: 5% 
+Health Insurance: $75.00
+
+Your program should prompt the user to input the gross amount and the employee name. The output will be stored in a file. 
+Format your output to have two decimal places. A sample output follows:
+
+Bill Robinson 
+Gross Amount: ............ $3575.00 
+Federal Tax: ............. $ 536.25 
+State Tax: ............... $ 125.13
+Social Security Tax: ..... $ 205.56 
+Medicare/Medicaid Tax: ... $ 98.31 
+Pension Plan: ............ $ 178.75 
+Health Insurance: ........ $ 75.00
+Net Pay: ................. $2356.00
+
+Note that the first column is left-justified, and the right column is rightjustified. */
+----------------------------------------------------------------------------------------------------------------------------------------
+#include <iostream>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+
+    double FEDTAX = .15;
+    double STATETAX = .035;
+    double SSTAX = .0575;
+    double MEDTAX = .0275;
+    double PENSION = .05;
+    double HEALTH = 75;
+    double grossPay;
+    string firstName, lastName;
+
+    cout << fixed << showpoint << setprecision(2);
+
+    cout << "What is your name: " << endl;
+    cin >> firstName;
+    cin >> lastName;
+
+    cout << "What is your gross pay: " << endl;
+    cin >> grossPay;
+    cout << endl;
+
+    cout << firstName << " "  <<lastName <<endl;
+
+    cout << fixed << setprecision(2) << showpoint;
+
+    cout << setfill('.');
+    cout << "Gross Amount: " << setw(20) << " $" << grossPay <<endl;
+    cout << "Federal Tax: " << setw(21) << " $" << grossPay * FEDTAX <<endl;
+    cout << "State Tax: " <<setw(23) << " $" << grossPay * STATETAX <<endl;
+    cout << "Social Security Tax: " <<setw(13) << " $" << grossPay * SSTAX <<endl;
+    cout << "Medicare/Medicaid Tax: " <<setw(11) << " $" << grossPay * MEDTAX <<endl;
+    cout << "Pension Plan: " <<setw(20) << " $" << grossPay * PENSION <<endl;
+    cout << "Health Insurance: " <<setw(16) << " $" << HEALTH <<endl;
+    cout << "Net Pay: " <<setw(25) << " $" << grossPay - ((grossPay * FEDTAX) + (grossPay * STATETAX) + (grossPay * SSTAX) + (grossPay * MEDTAX) + (grossPay * PENSION) + (HEALTH))  <<endl;
+
+   return 0;
+
+
+}
+
